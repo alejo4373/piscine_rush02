@@ -3,17 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkatolik <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/28 16:44:48 by tkatolik          #+#    #+#             */
-/*   Updated: 2018/10/28 22:05:43 by tkatolik         ###   ########.fr       */
+/*   Created: 2018/11/11 13:35:39 by alfranco          #+#    #+#             */
+/*   Updated: 2018/11/11 13:55:17 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		rush(int x, int y);
+#include <stdio.h>
+// #include <stdlib.h>
+// #include <sys/types.h>
+// #include <sys/uio.h>
+#include <unistd.h>
 
-int			main(void)
+int		main(void)
 {
-	rush(5, 5);
-	return (0);
+	char ch;
+	while (read(0, &ch, 1) > 0)
+	{
+		printf("%c", ch);
+	}
 }
