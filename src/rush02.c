@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush01.c                                           :+:      :+:    :+:   */
+/*   rush02.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eulee <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 17:23:31 by eulee             #+#    #+#             */
-/*   Updated: 2018/10/28 22:01:39 by tkatolik         ###   ########.fr       */
+/*   Updated: 2018/11/11 13:26:50 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
+
+int		ft_atoi(char *str);
+void	ft_putchar(char	a);
 void	ft_line_one(int x);
 void	ft_line_two(int y);
+void	ft_line_three(int z);
 
 void	rush(int x, int y)
 {
@@ -31,7 +35,7 @@ void	rush(int x, int y)
 			ft_line_two(x);
 			c++;
 		}
-		ft_line_one(x);
+		ft_line_three(x);
 	}
 }
 
@@ -53,7 +57,7 @@ void	ft_line_one(int x)
 			ft_putchar('B');
 			i++;
 		}
-		ft_putchar('C');
+		ft_putchar('A');
 		ft_putchar('\n');
 	}
 }
@@ -80,3 +84,37 @@ void	ft_line_two(int y)
 		ft_putchar('\n');
 	}
 }
+
+void	ft_line_three(int z)
+{
+	int i;
+
+	i = 2;
+	if (z == 1)
+	{
+		ft_putchar('C');
+		ft_putchar('\n');
+	}
+	else
+	{
+		ft_putchar('C');
+		while (z > i)
+		{
+			ft_putchar('B');
+			i++;
+		}
+		ft_putchar('C');
+		ft_putchar('\n');
+	}
+}
+
+int		main(int ac, char **av)
+{
+	if (ac != 3)
+	{
+		return (write(1, "Not valid args\n", 15));
+	}
+	rush(ft_atoi(av[1]), ft_atoi(av[2]));
+	return (0);
+}
+
