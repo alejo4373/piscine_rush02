@@ -6,7 +6,7 @@
 /*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 17:33:41 by alfranco          #+#    #+#             */
-/*   Updated: 2018/11/11 19:25:05 by alfranco         ###   ########.fr       */
+/*   Updated: 2018/11/11 21:58:19 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,18 @@ void		ft_putchar(char a)
 	write(1, &a, 1);
 }
 
+void	ft_putstr(char *str)
+{
+	int index;
+
+	index = 0;
+	while (str[index] != '\0')
+	{
+		ft_putchar(str[index]);
+		index++;
+	}
+}
+
 char	*ft_str_replace(char *str, int rush_num, int x, int y)
 {
 	int str_len;
@@ -130,3 +142,46 @@ int	ft_str_are_equal(char *s1, char *s2)
 	return (0);
 }
 
+void	ft_putnbr(long long n)
+{
+	char c;
+
+	c = n + '0';
+	if (n < 10)
+		write(1, &c, 1);
+	else
+	{
+		ft_putnbr(n / 10);
+		c = (n % 10) + '0';
+		write(1, &c, 1);
+	}
+}
+
+void	ft_print(int *arr, int x, int y)
+{
+	int i;
+
+	i = 0;
+	if (!arr[0] && !arr[1] && !arr[2] && !arr[3] && !arr[4])
+	{
+		ft_putstr("Not valid");
+		return ;
+	}
+	while (i <= 4)
+	{
+		if (arr[i])
+		{
+			if (i != 0 && arr[i - 1] != 0)
+				ft_putstr("|| ");
+			ft_putstr("[rush-0");
+			ft_putnbr(i);
+			ft_putstr("] [");
+			ft_putnbr(x);
+			ft_putstr("] [");
+			ft_putnbr(y);
+			ft_putstr("] ");
+		}
+		i++;
+	}
+	ft_putstr("\n");
+}

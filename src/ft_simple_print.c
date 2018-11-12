@@ -6,11 +6,11 @@
 /*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 18:21:24 by alfranco          #+#    #+#             */
-/*   Updated: 2018/11/11 18:32:26 by alfranco         ###   ########.fr       */
+/*   Updated: 2018/11/11 21:19:14 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str);
+#include "../includes/rush.h"
 
 char	*ft_str_replace(char *str, int rush_num, int x, int y)
 {
@@ -31,3 +31,4 @@ char	*ft_str_replace(char *str, int rush_num, int x, int y)
 	}
 	return (str);
 }
+

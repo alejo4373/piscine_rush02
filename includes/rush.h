@@ -6,7 +6,7 @@
 /*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 18:53:05 by alfranco          #+#    #+#             */
-/*   Updated: 2018/11/11 20:53:30 by alfranco         ###   ########.fr       */
+/*   Updated: 2018/11/11 21:22:22 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 #include <unistd.h>
 
 int			ft_strlen(char *str);
+void		ft_putnbr(long long n);
+void		ft_print(int *arr, int x, int y);
 long long	ft_atoi(char *str);
 char		*ft_str_replace(char *str, int rush_num, int x, int y);
 int			ft_str_are_equal(char *s1, char *s2);

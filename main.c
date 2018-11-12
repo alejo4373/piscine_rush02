@@ -6,7 +6,7 @@
 /*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 13:35:39 by alfranco          #+#    #+#             */
-/*   Updated: 2018/11/11 20:54:14 by alfranco         ###   ########.fr       */
+/*   Updated: 2018/11/11 22:00:58 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ void	print_result(int *arr_results, int x, int y)
 
 int		main(void)
 {
-	char *arr_strs[5];
 	int arr_result[5];
 	char *str;
 	char *out;
@@ -84,16 +83,8 @@ int		main(void)
 	{
 		out = g_fun_ptr[j](find_width(str), find_hight(str));
 		arr_result[j] = ft_str_are_equal(str, out);
-		printf("result: %i\n", arr_result[j]);
 		j++;
 	}
-	// printf("cmp: %i",ft_str_are_equal(str, out));
-	
-
-
-	// printf("w: %i, h: %i\n", find_width(str), find_hight(str));
-	// printf("str:\n%s", str);
-	// printf("-------------");
-	// printf("out:\n%s", out);
-	
+	ft_print(arr_result, find_width(str), find_hight(str));
+	return (0);
 }
