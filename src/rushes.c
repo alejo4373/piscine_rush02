@@ -6,21 +6,19 @@
 /*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 12:24:27 by mkryukov          #+#    #+#             */
-/*   Updated: 2018/11/11 20:51:35 by alfranco         ###   ########.fr       */
+/*   Updated: 2018/11/11 23:24:07 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-void	ft_putchar(char c);
-
 char	*rush00(int x, int y)
 {
-	char *str;
-	int w;
-	int h;
-	int i;
+	char	*str;
+	int		w;
+	int		h;
+	int		i;
 
 	str = (char *)malloc(sizeof(char) * (x + 1) * y + 1);
 	i = 0;
@@ -49,15 +47,15 @@ char	*rush00(int x, int y)
 		h++;
 	}
 	str[i] = '\0';
-	return(str);
+	return (str);
 }
 
 char	*rush01(int x, int y)
 {
-	char *str;
-	int w;
-	int h;
-	int i;
+	char	*str;
+	int		w;
+	int		h;
+	int		i;
 
 	str = (char *)malloc(sizeof(char) * (x + 1) * y + 1);
 	i = 0;
@@ -87,15 +85,15 @@ char	*rush01(int x, int y)
 		i++;
 	}
 	str[i] = '\0';
-	return(str);
+	return (str);
 }
 
 char	*rush02(int x, int y)
 {
-	char *str;
-	int w;
-	int h;
-	int i;
+	char	*str;
+	int		w;
+	int		h;
+	int		i;
 
 	str = (char *)malloc(sizeof(char) * (x + 1) * y + 1);
 	i = 0;
@@ -130,10 +128,10 @@ char	*rush02(int x, int y)
 
 char	*rush03(int x, int y)
 {
-	char *str;
-	int w;
-	int h;
-	int i;
+	char	*str;
+	int		w;
+	int		h;
+	int		i;
 
 	str = (char *)malloc(sizeof(char) * (x + 1) * y + 1);
 	h = 0;
@@ -163,20 +161,20 @@ char	*rush03(int x, int y)
 		h++;
 	}
 	str[i] = '\0';
-	return(str);
+	return (str);
 }
 
 char	*rush04(int x, int y)
 {
-	char *str;
-	int w;
-	int h;
-	int i;
+	char	*str;
+	int		w;
+	int		h;
+	int		i;
 
-	str = (char *)malloc(sizeof(char) * (x + 1) * y + 1);
 	w = 1;
 	h = 1;
 	i = 0;
+	str = (char *)malloc(sizeof(char) * (x + 1) * y + 1);
 	if (x == 0 || y == 0)
 		return ("");
 	while (h != y + 1)
@@ -201,5 +199,5 @@ char	*rush04(int x, int y)
 		i++;
 	}
 	str[i] = '\0';
-	return(str);
+	return (str);
 }
