@@ -6,21 +6,22 @@
 /*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 18:53:05 by alfranco          #+#    #+#             */
-/*   Updated: 2018/11/11 21:22:22 by alfranco         ###   ########.fr       */
+/*   Updated: 2018/11/11 22:18:30 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RUSH_H
 # define RUSH_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
-#include <sys/uio.h>
-#include <unistd.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <unistd.h>
 
 int			ft_strlen(char *str);
 void		ft_putnbr(long long n);
+void		ft_putstr(char *str);
 void		ft_print(int *arr, int x, int y);
 long long	ft_atoi(char *str);
 char		*ft_str_replace(char *str, int rush_num, int x, int y);

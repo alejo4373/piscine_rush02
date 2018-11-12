@@ -6,9 +6,11 @@
 /*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 17:33:41 by alfranco          #+#    #+#             */
-/*   Updated: 2018/11/11 12:44:59 by alfranco         ###   ########.fr       */
+/*   Updated: 2018/11/11 22:15:01 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/rush.h"
 
 int			ft_is_space(char c)
 {
