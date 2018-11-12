@@ -5,89 +5,47 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/28 16:49:09 by tkatolik          #+#    #+#             */
-/*   Updated: 2018/11/11 13:27:40 by alfranco         ###   ########.fr       */
+/*   Created: 2018/10/26 12:24:27 by mkryukov          #+#    #+#             */
+/*   Updated: 2018/11/11 16:26:38 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-void		ft_putchar(char a);
-int			ft_atoi(char *str);
+void	ft_putchar(char c);
 
-void		ft_line_one(int x)
+char	*rush00(int x, int y)
 {
-	int		i;
+	char *str;
+	int w;
+	int h;
+	int i;
 
-	i = 2;
-	if (x == 1)
+	str = (char *)malloc(sizeof(char) * (x + 1) * y + 1);
+	i = 0;
+	h = 0;
+	while (h < y)
 	{
-		ft_putchar('o');
-		ft_putchar('\n');
-	}
-	else
-	{
-		ft_putchar('o');
-		while (x > i)
+		w = 0;
+		while (w < x)
 		{
-			ft_putchar('-');
+			if ((w == 0 && h == 0) || (w == 0 && h == y - 1) ||
+			(w == x - 1 && h == 0) || (w == x - 1 && h == y - 1))
+				str[i] = 'o';
+			else if (w == 0 || w == x - 1)
+				str[i] = '|';
+			else if (h == 0 || h == y - 1)
+				str[i] = '-';
+			else
+				str[i] = ' ';
+			w++;
 			i++;
 		}
-		ft_putchar('o');
-		ft_putchar('\n');
+		str[i] = '\n';
+		i++;
+		h++;
 	}
-}
-
-void		ft_line_two(int x)
-{
-	int		i;
-
-	i = 2;
-	if (x == 1)
-	{
-		ft_putchar('|');
-		ft_putchar('\n');
-	}
-	else
-	{
-		ft_putchar('|');
-		while (x > i)
-		{
-			ft_putchar(' ');
-			i++;
-		}
-		ft_putchar('|');
-		ft_putchar('\n');
-	}
-}
-
-void		rush(int x, int y)
-{
-	int		c;
-
-	c = 2;
-	if (x <= 0 || y <= 0)
-		return ;
-	else if (y == 1)
-		ft_line_one(x);
-	else
-	{
-		ft_line_one(x);
-		while (y > c)
-		{
-			ft_line_two(x);
-			c++;
-		}
-		ft_line_one(x);
-	}
-}
-
-int		main(int ac, char **av)
-{
-	if (ac != 3)
-	{
-		return (write(1, "Not valid args\n", 15));
-	}
-	rush(ft_atoi(av[1]), ft_atoi(av[2]));
-	return (0);
+	i++;
+	str[i] = '\0';
+	return(str);
 }

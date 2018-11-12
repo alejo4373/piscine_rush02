@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush02.c                                           :+:      :+:    :+:   */
+/*   rush04.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 17:23:31 by eulee             #+#    #+#             */
-/*   Updated: 2018/11/11 15:44:41 by alfranco         ###   ########.fr       */
+/*   Updated: 2018/11/11 13:28:54 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+int		ft_atoi(char *str);
+void	ft_putchar(char a);
 void	ft_line_one(int x);
 void	ft_line_two(int y);
 void	ft_line_three(int z);
@@ -55,7 +57,7 @@ void	ft_line_one(int x)
 			ft_putchar('B');
 			i++;
 		}
-		ft_putchar('A');
+		ft_putchar('C');
 		ft_putchar('\n');
 	}
 }
@@ -101,7 +103,7 @@ void	ft_line_three(int z)
 			ft_putchar('B');
 			i++;
 		}
-		ft_putchar('C');
+		ft_putchar('A');
 		ft_putchar('\n');
 	}
 }
@@ -115,4 +117,3 @@ int		main(int ac, char **av)
 	rush(ft_atoi(av[1]), ft_atoi(av[2]));
 	return (0);
 }
-

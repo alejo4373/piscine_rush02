@@ -6,12 +6,14 @@
 /*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 17:23:31 by eulee             #+#    #+#             */
-/*   Updated: 2018/11/11 15:44:41 by alfranco         ###   ########.fr       */
+/*   Updated: 2018/11/11 13:26:50 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+int		ft_atoi(char *str);
+void	ft_putchar(char	a);
 void	ft_line_one(int x);
 void	ft_line_two(int y);
 void	ft_line_three(int z);

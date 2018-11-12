@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush02.c                                           :+:      :+:    :+:   */
+/*   rush01.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 17:23:31 by eulee             #+#    #+#             */
-/*   Updated: 2018/11/11 15:44:41 by alfranco         ###   ########.fr       */
+/*   Updated: 2018/11/11 13:27:27 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+int		ft_atoi(char *str);
+void	ft_putchar(char a);
 void	ft_line_one(int x);
 void	ft_line_two(int y);
 void	ft_line_three(int z);
@@ -44,18 +46,18 @@ void	ft_line_one(int x)
 	i = 2;
 	if (x == 1)
 	{
-		ft_putchar('A');
+		ft_putchar('/');
 		ft_putchar('\n');
 	}
 	else
 	{
-		ft_putchar('A');
+		ft_putchar('/');
 		while (x > i)
 		{
-			ft_putchar('B');
+			ft_putchar('*');
 			i++;
 		}
-		ft_putchar('A');
+		ft_putchar('\\');
 		ft_putchar('\n');
 	}
 }
@@ -67,18 +69,18 @@ void	ft_line_two(int y)
 	i = 2;
 	if (y == 1)
 	{
-		ft_putchar('B');
+		ft_putchar('*');
 		ft_putchar('\n');
 	}
 	else
 	{
-		ft_putchar('B');
+		ft_putchar('*');
 		while (y > i)
 		{
 			ft_putchar(' ');
 			i++;
 		}
-		ft_putchar('B');
+		ft_putchar('*');
 		ft_putchar('\n');
 	}
 }
@@ -90,18 +92,18 @@ void	ft_line_three(int z)
 	i = 2;
 	if (z == 1)
 	{
-		ft_putchar('C');
+		ft_putchar('\\');
 		ft_putchar('\n');
 	}
 	else
 	{
-		ft_putchar('C');
+		ft_putchar('\\');
 		while (z > i)
 		{
-			ft_putchar('B');
+			ft_putchar('*');
 			i++;
 		}
-		ft_putchar('C');
+		ft_putchar('/');
 		ft_putchar('\n');
 	}
 }
@@ -115,4 +117,3 @@ int		main(int ac, char **av)
 	rush(ft_atoi(av[1]), ft_atoi(av[2]));
 	return (0);
 }
-
