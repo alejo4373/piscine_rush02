@@ -6,7 +6,7 @@
 /*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 18:53:05 by alfranco          #+#    #+#             */
-/*   Updated: 2018/11/11 19:52:30 by alfranco         ###   ########.fr       */
+/*   Updated: 2018/11/11 20:53:30 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,13 @@ char		*rush04(int x, int y);
 
 typedef char *(*t_fun_ptr)(int, int);
 
-static t_fun_ptr	g_fun_ptr[1] =
+static t_fun_ptr	g_fun_ptr[5] =
 {
 	rush00,
-	// &rush01,
-	// &rush02,
-	// &rush03,
-	// &rush04
+	rush01,
+	rush02,
+	rush03,
+	rush04
 };
 
 #endif

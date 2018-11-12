@@ -6,7 +6,7 @@
 /*   By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 13:35:39 by alfranco          #+#    #+#             */
-/*   Updated: 2018/11/11 19:57:20 by alfranco         ###   ########.fr       */
+/*   Updated: 2018/11/11 20:54:14 by alfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,11 +80,11 @@ int		main(void)
 	}
 	str[i] = '\0';
 	
-	while (j <= 0)
+	while (j <= 4)
 	{
 		out = g_fun_ptr[j](find_width(str), find_hight(str));
 		arr_result[j] = ft_str_are_equal(str, out);
-		printf("result: %i", arr_result[j]);
+		printf("result: %i\n", arr_result[j]);
 		j++;
 	}
 	// printf("cmp: %i",ft_str_are_equal(str, out));
