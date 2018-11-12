@@ -6,7 +6,7 @@
 #    By: alfranco <alfranco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 20:44:39 by alfranco          #+#    #+#              #
-#    Updated: 2018/11/11 22:36:57 by alfranco         ###   ########.fr        #
+#    Updated: 2018/11/11 22:44:17 by alfranco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,4 +31,4 @@ clean:
 	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(LIB_NAME);
+	rm -f $(LIB_NAME) $(PROGRAM_NAME)
